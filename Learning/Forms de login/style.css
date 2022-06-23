@@ -19,8 +19,8 @@ body{
     color: var(--text_color);
     font-weight: 500;
     display: flex;
-    width:100vw;
-    height:100vh;
+    min-width:100vw;
+    min-height:100vh;
 }
 
 main{
@@ -34,8 +34,8 @@ main{
 main h1{
     color:var(--title_color);
     font-size: 3rem;
-    margin-top: none;
     margin-bottom: 3rem;
+    text-align: center;
 }
 
 main .social_media{
@@ -128,13 +128,15 @@ main form input[type='submit']:hover{
 }
 
 section.image{
+    width: 50vw;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
     padding: 4rem;
 }
 
 section.image img{
-    width: 90%;
+    width: 100%;
 }
 
 section.image .circle{
@@ -146,4 +148,39 @@ section.image .circle{
     background: linear-gradient(45deg, #e8cbc0, #636fa4);
     clip-path: circle(40% at right 90%);
     z-index: -1;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+    section.image img{
+      width: 110%;  
+    }
+    
+    section.image .circle{
+        clip-path: circle(35% at right 80%);
+    }
+}
+
+@media only screen and (max-width: 900px){
+    section.image{
+        display: none;
+        visibility: hidden;
+    }
+
+    main{
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    main h1{
+        font-size: 2rem;
+    }
+
+    main.alternative span{
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input[type="submit"]{
+        font-size: 1rem;
+    }
 }
