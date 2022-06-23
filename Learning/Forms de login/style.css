@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --background_color:#1b2029;
+    --title_color:#8880fe;
+    --text_color:#fff;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:var(--background_color);
+    color: var(--text_color);
+    font-weight: 500;
+    display: flex;
+    width:100vw;
+    height:100vh;
+}
+
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    color:var(--title_color);
+    font-size: 3rem;
+    margin-top: none;
+    margin-bottom: 3rem;
+}
+
+main .social_media{
+    display: flex;
+    align-content: center;
+}
+
+main .social_media a{
+    text-decoration: none;
+}
+
+main .social_media img{
+    width: 36px;
+    margin-left: 3rem;
+
+}
+main .social_media a:first-child img{
+    margin-left: 0;
+}
+
+main .alternative{
+    margin-top: 1rem;
+}
+
+main .alternative span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(225, 225, 225, 0.3);
+    position: relative;
+}
+
+main .alternative span::before, main .alternative span::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 115px;
+    bottom: 50%;
+    right: 25px;
+    margin-right: 25px;
+    background: rgba(225, 225, 225, 0.3);
+}
+
+main .alternative span::after{
+    left: 50px;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+main form input{
+    background-color: #212b3d;
+    color:rgb(166, 166, 166);
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, 0.77);
+}
+
+main form input[type='submit']{
+    width: 50%;
+    margin-top: 3rem;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: white; 
+    transition: all 30ms ease-in-out;  
+    box-shadow: 10px 10px 40px -12px #5952d4; 
+}
+
+main form input[type='submit']:hover{
+    background-color: #5952d4;
+}
+
+section.image{
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem;
+}
+
+section.image img{
+    width: 90%;
+}
+
+section.image .circle{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #e8cbc0, #636fa4);
+    clip-path: circle(40% at right 90%);
+    z-index: -1;
+}
